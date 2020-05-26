@@ -22,7 +22,7 @@ module narrator (
   begin
     case (counter[9:2])      // data corresopnds to addresses in ROM which store sampled Phonemes
       0: data = 6'h1d;       // change the sequence to output any speech (refer to chatter.v) 
-      1: data = 6'h3b;
+      1: data = 6'h3b;       // now the program pronounces th-AR-DD2-0w (my name)
       2: data = 6'h21;
       3: data = 6'h35;
       default: data = 6'h02;
