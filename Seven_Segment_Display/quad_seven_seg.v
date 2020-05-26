@@ -2,7 +2,7 @@
 
 `timescale 1ns / 1ps
 
-//for BlackBoard with Xilinx ZYNQ 
+//Implemented on Xilinx ZYNQ Soc
 // 4x 4 bit inputs will be displayed on the quad seven segment display on board
 
 module quad_seven_seg(
