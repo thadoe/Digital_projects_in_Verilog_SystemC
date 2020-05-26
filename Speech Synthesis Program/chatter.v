@@ -136,7 +136,10 @@ module chatter (
   always @(posedge clk) rom_address <= pointer;
 
   // Begin INSTANTIATION Template from VEO or VHO File
-  phonemes my_phonemes (
+  // This is instantiation of ROM which is BRAM (8 bits width and 65536 depth bit depth) created using IP generator of Vivado
+  // BRAM is also initialized with the .coe file containing sample phonemes 
+  
+   phonemes my_phonemes (
     .clka(clk),                    // input wire clka
     .addra(rom_address),           // input wire [15 : 0] addra
     .douta(rom_data)               // output wire [7 : 0] douta
