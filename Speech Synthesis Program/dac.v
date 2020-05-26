@@ -1,9 +1,11 @@
+// This is the converter module to drive speaker 
+// Xilinx Application Note 154, Virtex Synthesizable Delta-Sigma DAC.
 
 `timescale 1 ns / 1 ps
 
 // Declare the module and its ports. This is
 // using Verilog-2001 syntax.
-// This is the converter module to drive speaker 
+
 
 module dac (
   input  wire  [7:0] sample,
