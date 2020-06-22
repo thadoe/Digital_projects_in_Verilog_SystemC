@@ -1,0 +1,86 @@
+
+Extremely Simple Computer (ESC) 
+
+//reference: Digital Logic Design Text @ Chang Choo (Aug 2014) and B.A. Shah's design 
+
+
+*********************************** Registers ***********************************
+
+MAR - memory address register (8 bits) 	//	MAR store memory address
+MDR - memory data register (16 bits) 	// 	MDR store memory word read or to be written  (0-255 memory locations)
+A - accumulator (8 bits) 		// 	Temp storage space for operations
+PC- program counter (8 bits)		//	PC store the address of next instruction
+OP- opcode register (8 bits) (MSB 8 bits of instrction)		//	8 bits opcodes (LD, AD, ST and JUMP) 
+
+
+*********************************** Instructions format ***********************************
+
+LD(load) - 00000000xxxxxxxx			//	Load Register A with memory word in xxxxxxxxx
+AD(add) - 00000001xxxxxxxxx			//	Add to Register A with memory word xxxxxxxxx
+ST(store) - 00000010xxxxxxxx			//	Store Register A to a memory location xxxxxxxxx
+JUMP (JUMP) - 00000011xxxxxxxxx			//	Jump to address in instruction 
+Remaining opcode bits are reserved for future use (100xxxxx,101xxxxx,...)
+
+
+
+*********************************** MEMORY ***********************************
+
+Simple BRAM with 16 width and 256 Depth 
+
+
+
+*********************************** Controller Description ***********************************
+
+Fetch+Decode				//	first read word from RAM and fetch opcode from it 
+	t0:MAR <- PC, read 
+	t1:MDR <- RAM, PC <- PC+1
+	t2:OP <- MDR[7-5]
+
+LD					// 	if opcode is LD,  load word in RAM address given by MAR to A 
+	c0t3:MAR <- MDR[7-0], read
+	c0t4:MDR <- RAM
+	c0t5:A <- MDR, T <- 0 
+
+AD					//	if opcode is AD, add word in RAM address given by MAR to A 
+	c1t3:MAR <- MDR[7-0], read
+	c1t4:MDR <- RAM 
+	c1t5:A <- MDR + A, T <- 0
+
+ST					//	if opcode is ST, write word in A to RAM address given by MAR 
+	c3t3:MAR <- MDR[7-0]
+	c3t4:MDR <- A, write 
+	c3t5:RAM <- MDR, T <- 0
+
+JUMP 
+	c4t3: MAR <- MDR[7-0]
+	c4t4: PC <- MDR[7-0]
+
+
+x1: MAR <- PC 
+	x1` = t0
+x2: MDR <- RAM 
+	x2 = t1 + c0t4 + c1t4
+x3: PC <- PC + 1 
+	x3 = t1
+x4: OP <- MDR[7-5]
+	x4 = t2 
+x5: MAR <- MDR[7-0]
+	x5 = c0t3 + c1t3 + c2t3 + c3t3
+x6: A <- MDR 
+	x6 = c0t5
+x7: RAM <- MDR 
+	x7 = c2t5
+x8: A <- A + MDR 
+	x8 = c1t5
+x9: MDR <- A 
+	x9 = c2t4 
+x10: T <- 0
+	x10 = c0t5 + c1t5 + c2t5
+x11: PC <- MDR[7-0]
+	x11 = c4t4
+read
+	read = t0 + c0t3 + c1t3
+write
+	write = x9
+ 
+
