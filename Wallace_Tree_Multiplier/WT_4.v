@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+// 4 bits Wallace Tree Multiplier 
 module WT_4(
     input wire [3:0] A,
     input wire [3:0] B,
