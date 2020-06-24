@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-// 4 bits Wallace Tree Multiplier // Tested in Vivado
+// 4 bits Wallace Tree Multiplier // Tested and synthesized on Vivado 2020
 module WT_4(
     input wire [3:0] A,
     input wire [3:0] B,
