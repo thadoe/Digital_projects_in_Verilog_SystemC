@@ -1,8 +1,5 @@
 `timescale 1ns/1ps 
 
-// Verilog model of device #74163, a synchronus counter
-// Tested and synthesised on Vivado 2020.1 
-
 module syn_counter # (parameter [7:0] count_in = 1 )(
     input wire clk,                                 // 100 MHz clock 
     input wire Ep,                                   
