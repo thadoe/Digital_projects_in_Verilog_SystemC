@@ -1,10 +1,6 @@
 `timescale 1ns / 1ps
 
 // FIFOs are used for many operations such as crossing clock domains, buffering and aligning data 
-// This is a modified hardware implementation of FIFO design by Faraz Khan 
-// please visit // www.simplefpga.blogspot.com for full description 
-// Revised design source and constraints to work with Blakboard FPGA 
-
 
 module FIFO # (parameter abit= 3, dbit = 3)(
     input clk,
@@ -100,3 +96,8 @@ end
        
 
 endmodule
+
+
+// This is a modified hardware implementation of FIFO design by Faraz Khan 
+// please visit // www.simplefpga.blogspot.com for full description 
+// Revised design source and constraints to work with Blakboard FPGA 
