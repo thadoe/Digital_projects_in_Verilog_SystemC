@@ -11,7 +11,7 @@ reg [31:0] counter = 0;
 wire Q0 , Q1; 
 
 always @ (posedge clk) begin
-    if (counter == slow_clk_half_period) begin    // counter value is intentionally kept low (about 2.5MHz here) for simulation with testbench from 
+    if (counter == slow_clk_half_period) begin    // counter value was intentionally kept low (about 2.5MHz here) for simulation with testbench from 
         clk_en <= 1'b1;                           // https://www.fpga4student.com/2017/04/simple-debouncing-verilog-code-for.html
         counter <= 0;
     end else begin
