@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+//Top layer 
+
 module button_debounce #(parameter slow_clk_half_period = 19)(
     input wire button_in,
     input wire clk,  // clk on board is 100Mhz
