@@ -1,1 +1,1 @@
-This is a simple and reusable double flip-flops button debouncing module.
+A simple and reusable module for button debouncing with double flip-flops.
