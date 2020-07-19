@@ -5,4 +5,4 @@ This is repository for some of my FPGA projects. All codes are simulated and ver
 
 Software: Xilinx Vivado 2020.1 and 2018 
 
-Hardwares: Blackboard with Xilinx Zynq XC7Z007SCLG400A SoC 
+Hardwares: Development Board with Xilinx Zynq-7000 SoC 
