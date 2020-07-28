@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 
 module encoder1(
-  input clk,
-  input     [7:0]  i_data ,
+  input           clk,
+  input   [7:0]  i_data ,
   input 	       i_rdisp ,        //running disparity: RD- = 0,  RD+ = 1
-  output    [9:0]  o_en_data,
+  output  [9:0]  o_en_data,
   output	       o_rdisp,
-  input            kin            // char type control:  1=contorl 0=data 
+  input          kin             // char type control:  1=contorl 0=data 
    );
    
 reg [2:0] i_y;
