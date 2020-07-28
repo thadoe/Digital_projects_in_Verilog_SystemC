@@ -1,5 +1,5 @@
 # Verilog_HDL_projects-
-Inference Design, Behavioral simulations, and Hardware Implementation.
+Inference Design, Simulations, and Hardware Implementation.
 
 This is repository for some of my FPGA projects. All codes are simulated and verified on testbench or on hardware.
 
