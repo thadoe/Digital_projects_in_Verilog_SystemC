@@ -1,7 +1,6 @@
 `timescale 1ns / 1ps
 
 //simple testbench for writing a specific stream of data 
-//does not cover all possible cases
 
 //`define TestDisp
 
