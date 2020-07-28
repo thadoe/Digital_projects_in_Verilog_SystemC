@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 
 module DISP_GEN(
-    input i_rdisp,              // current running disparity  
-    output reg o_rdisp = 0,     // disparity for next code group
-    input [9:0] i_stream,
-    output o_state,
-    input clk
+    input               i_rdisp,              // current running disparity  
+    output reg          o_rdisp = 0,         // disparity for next code group
+    input       [9:0]   i_stream,
+    output              o_state,
+    input               clk
     );
     
    integer i;
