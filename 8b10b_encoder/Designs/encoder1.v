@@ -65,7 +65,7 @@ DISP_GEN generator(
    .clk(clk)
     );
 
-
+ //Concatenation for encoded code group 
 assign o_en_data = {o_6MSB,o_4LSB}; 
 
 endmodule
