@@ -3,14 +3,14 @@
 //3 bits to 4 bits Encoding Table 
 
 module LUT_3_4(
-    input clk,
-    input [2:0] i_y,     //  HGF
-    output [3:0] o_data,    //  fghi
-    input 	    i_disp,
-    input       kin,
-    input [4:0] i_x,
-    input flip,
-    input o_state
+    input           clk,
+    input   [2:0]   i_y,        //  HGF
+    output  [3:0]   o_data,     //  fghi
+    input 	        i_disp,
+    input           kin,
+    input   [4:0]   i_x,
+    input           flip,
+    input           o_state
 
     );
     
