@@ -3,12 +3,12 @@
 //5 bits to 6 bits Encoding Table 
 
 module LUT_5_6(
-    input clk,
-    input [4:0] i_x,        //  EDCBA
-    output [5:0] o_data,    //  abcdei
-    input 	    i_disp,
-    input [2:0] i_y, 
-    input kin
+    input           clk,
+    input   [4:0]   i_x,        //  EDCBA
+    output  [5:0]   o_data,     //  abcdei
+    input 	        i_disp,
+    input   [2:0]   i_y, 
+    input           kin
     );
     reg [5:0] o_data_reg;
     assign o_data = o_data_reg;
