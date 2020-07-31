@@ -7,4 +7,6 @@ Software: Xilinx Vivado 2020.1 and 2018
 
 Hardwares: Development Board with Xilinx Zynq-7000 SoC 
 
-High Level Code are simulated on EDA playground @ https://www.edaplayground.com/
+
+
+High Level Codes in C++ are simulated on EDA playground @ https://www.edaplayground.com/
