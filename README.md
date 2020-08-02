@@ -1,4 +1,4 @@
-# Verilog/SystemC_HDL_projects- 
+# Verilog/SystemC_projects- 
 Inference Design, Simulations, and Hardware Implementation.
 
 This is repository for some of my FPGA projects. All codes are simulated and verified on testbench or on hardware.
