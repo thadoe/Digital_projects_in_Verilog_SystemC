@@ -42,10 +42,8 @@ void DISP_GEN :: FSM (void){
     
     cout<< "@" << sc_time_stamp() <<" " <<curr_state<<endl;   	// ignore.for debug
     
-    wait(); // suspend process untill next event 
-   
-  }
-   
+    wait(); // suspend process untill next event   
+  }   
 }
 //output logic 
 void DISP_GEN :: FSM_out (void){	                           
