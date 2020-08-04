@@ -57,8 +57,7 @@ void DISP_GEN :: FSM_out (void){
           o_rdisp.write(1);   	 
       	  o_state.write(1);
     }
-    wait();
-    
+    wait();  
   }
 }
 
