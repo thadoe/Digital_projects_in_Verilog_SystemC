@@ -29,13 +29,13 @@ SC_MODULE (DISP_GEN){
   	 
      	// concurrent threads
   	 
-	SC_METHOD (count);
-	sensitive << i_rdisp;
-	sensitive << i_stream;
+		SC_METHOD (count);
+			sensitive << i_rdisp;
+			sensitive << i_stream;
 
-	SC_CTHREAD (FSM, clk.pos());  
+		SC_CTHREAD (FSM, clk.pos());  
 
-	SC_CTHREAD (FSM_out, clk.pos());
+		SC_CTHREAD (FSM_out, clk.pos());
   	}
   
 
