@@ -1,1 +1,1 @@
-Custom half precision floating point multiplier with leading zeros counter 
+Pipelined half precision (IEEE 754) floating point multiplier with leading zeros counter
