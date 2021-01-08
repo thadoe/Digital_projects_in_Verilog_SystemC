@@ -11,6 +11,6 @@ Hardwares: Development Board with Xilinx Zynq-7000 SoC
 
 Software development on ARM processor was done on Xilinx SDK or Vivado HLS 
 
-High Level Codes in C++ were simulated on EDA playground @ https://www.edaplayground.com/
+Some high level codes in C++ were simulated on EDA playground @ https://www.edaplayground.com/
 
 ![alt text](unnamed.png)
