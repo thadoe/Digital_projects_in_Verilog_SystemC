@@ -12,4 +12,4 @@ Software development on ARM processor was done on Xilinx SDK or Vivado HLS
 
 High Level Codes in C++ were simulated on EDA playground @ https://www.edaplayground.com/
 
-![alt text](http://url/to/img.png)
+![alt text](unnamed.png)
